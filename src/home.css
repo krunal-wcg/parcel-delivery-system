@@ -1,0 +1,60 @@
+
+.home_container{
+    display: flex;
+}
+
+.left_bar, .right_bar{
+
+    transition: all .3s ease-out;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    position: absolute;
+    top: 1px;
+    bottom: 0;
+}
+
+.left_bar{
+    width: 24%;
+}
+
+.right_bar{
+    width: 75%;
+    background-color: #f5f5f5;
+  position: absolute;
+  left: 450px;
+  right: 0;
+  padding: 20px;
+}
+
+.pakeges_aside{
+
+        position: relative;
+        height: 100px;
+        width: 220px;
+        background-color: #57b3dd;
+        padding: 5px;
+        border: 1px solid gray;
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-left: 10px;
+       
+        transform: perspective(75em) rotateX(18deg);
+        box-shadow: rgba(22, 31, 39, 0.42) 0px 60px 123px -25px,
+                    rgba(19, 26, 32, 0.08) 0px 35px 75px -35px;
+        border-radius: 10px;
+        border: 1px solid;
+        border-color: rgb(213, 220, 226) rgb(213, 220, 226) rgb(184, 194, 204);
+        cursor: move;
+        cursor: grab;
+        cursor: -moz-grab;
+        cursor: -webkit-grab;
+   
+}
+
+.truck{
+    height: 325px;
+    width:325px;
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+}
