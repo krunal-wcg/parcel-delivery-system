@@ -77,8 +77,16 @@ export const pakages = [
     {id: 76, name: 'Lip Balm', weight: 0.1},
     {id: 77, name: 'Snacks', weight: 0.6},
     {id: 78, name: 'Gum', weight: 0.1},
-    {id: 79, name: 'Chapstick', weight: 0.1}
-  ]
+    {id: 79, name: 'Chapstick', weight: 0.1},
+    {id: 80, name: 'Snacks', weight: 10.2 },     
+    {id: 81, name: 'Gum', weight: 5 },
+    {id: 82, name: 'Chapstick', weight: 11 },
+    {id: 85, name: 'KK', weight: 1 },
+    {id: 86, name: 'Snacks', weight: 1 },     
+    {id: 88, name: 'Snacks', weight: 2 },
+    {id: 90, name: 'Snacks', weight: 10.2 },
+
+]
 
 export const truckDetails = [
     {
@@ -86,23 +94,23 @@ export const truckDetails = [
         truckNumber: "GJ-01-K1470",
         capacity: 1000,
         img: "https://www.svgrepo.com/show/25233/delivery-truck.svg",
-        maxWeight: 1000,
-        minWeight:10
+        maxWeight: 100,
+        minWeight: 10
     }, // parcel: [],load:0
     {
         type: "delivery",
         truckNumber: "GJ-01-P1840",
-        capacity: 750,
+        capacity: 100,
         img: "https://www.iconpacks.net/icons/1/free-truck-icon-1058-thumb.png",
         maxWeight: 10,
-        minWeight:1
+        minWeight: 0
     },
     {
         type: "vehicle",
         truckNumber: "GJ-01-M5470",
-        capacity: 500,
+        capacity: 10,
         img: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Linecons_small-truck.svg/2048px-Linecons_small-truck.svg.png",
         maxWeight: 1,
-        minWeight:0
+        minWeight: 0
     },
 ];

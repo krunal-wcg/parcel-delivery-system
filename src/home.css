@@ -19,15 +19,16 @@
 
 .right_bar{
     width: 40%;
-    background-color: #f5f5f5;
+    background-color: #fffbf0;
   position: absolute;
-  left: 450px;
+  left: 25%;
   right: 0;
   padding: 20px;
+  /* height: calc(100vh - 45px); */
 }
 .details_bar{
     width: 35%;
-    background-color: #f5f5f5;
+    background-color: #fffbf0;
   position: absolute;
   right: 0;
   /* right: 0; */
@@ -51,7 +52,7 @@
                     rgba(19, 26, 32, 0.08) 0px 35px 75px -35px;
         border-radius: 10px;
         border: 1px solid;
-        border-color: rgb(213, 220, 226) rgb(213, 220, 226) rgb(184, 194, 204);
+        /* border-color: rgb(213, 220, 226) rgb(213, 220, 226) rgb(184, 194, 204); */
         cursor: move;
         cursor: grab;
         cursor: -moz-grab;
@@ -60,8 +61,8 @@
 }
 
 .truck{
-    height: 325px;
-    width:325px;
+    height: 300px;
+    width:300px;
     /* position: relative; */
     display: flex;
     flex-direction: column;
@@ -69,22 +70,38 @@
 
 
 .details-image{
-    height:350px ;
+    height:300px ;
     width: 60%;
     margin: 10px auto;
     display: flex;
     justify-content: center;
+
 }
 
 .details-list{
     text-align: center;
     width: 90%;
-    /* margin: 10px auto; */
+    margin: 10px;
     /* display: flex; */
     /* justify-content: space-between; */
 }
 
 .list-td{
     padding: 5px;
-    border: 1px solid black;
+    /* background-color: yellow; */
+    /* border: 1px solid black; */
+}
+
+
+.details-head{
+    text-align: center;
+    position: relative;
+}
+.details-head::after{
+position: absolute;
+content: '';
+height: 3px;
+width: 90%;
+background-color: black;
+right: 5%;
 }
