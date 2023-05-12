@@ -15,6 +15,7 @@
 
 .left_bar{
     width: 20%;
+    margin-top:50px ;
 }
 
 .right_bar{
@@ -61,7 +62,7 @@
 }
 
 .truck{
-    height: 300px;
+    height: 320px;
     width:300px;
     /* position: relative; */
     display: flex;
@@ -70,7 +71,7 @@
 
 
 .details-image{
-    height:300px ;
+    height:320px ;
     width: 60%;
     margin: 10px auto;
     display: flex;
@@ -105,3 +106,21 @@ width: 90%;
 background-color: black;
 right: 5%;
 }
+
+.vehicle-number{
+    position: absolute;
+    bottom: 8px ;
+    right: 34%;
+    border: 3px solid #000000;
+    background-color: yellow;
+    border-radius: 7px;
+    padding: 3px 8px;
+    color: #000000;
+}
+
+
+.addAll-btn{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
