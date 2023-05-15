@@ -4,7 +4,7 @@ import { percentage } from './HomePage';
 import { toast } from 'react-toastify';
 import { allTrucks } from './data';
 
-const Main = ({truck,func}) => {
+const Main = ({truckData,func}) => {
 
     function drop(ev) {
         if (ev.dataTransfer.getData("id")) {
@@ -19,7 +19,9 @@ const Main = ({truck,func}) => {
             weight: ev.dataTransfer.getData("weight"),
             pakageFor: ev.dataTransfer.getData("pin"),
           };
-          console.log(truck[0].parcel);
+
+          console.log(dropValue);
+        //   console.log(truck.parcel);
           // truck.map((oneTruck)=>{
           // if(oneTruck.load+dropValue.weight >= oneTruck.capacity)
           toast.success("Your Item add in " + truckType, {
@@ -43,7 +45,7 @@ const Main = ({truck,func}) => {
       }
   return (
     <div>
-        <div style={{ height: "calc(100vh - 100px)" }}>
+        {/* <div style={{ height: "calc(100vh - 100px)" }}>
             {truck
               .map((oneVehicleTruck, index) => (
                 <div
@@ -121,10 +123,11 @@ const Main = ({truck,func}) => {
                   <div className="vehicle-number">{oneVehicleTruck.truckNumber}</div>
                 </div>
               ))}
-          </div>
-              {/* <div style={{ height: "calc(100vh - 100px)" ,display:'flex'}}>
-            {allTrucks
-              .map((addressCode, index) => (
+          </div> */}
+              <div style={{ height: "calc(100vh - 100px)" ,display:'flex'}}>
+            {truckData.sort(function (a, b) {
+        return a.pincode - b.pincode;
+      }).map((addressCode, index) => (
 
 <div  key={index}  style={{display:'flex' ,flexDirection:'column',position: "relative", width: "325px", overflowY: 'scroll',
   transform: "rotate('-90deg')" , scrollDirection: 'horizontal',minWidth:'275px' ,margin:'0 25px'}}>
@@ -133,21 +136,21 @@ const Main = ({truck,func}) => {
 
                 {addressCode.trucks.sort(function (a, b) {
         return b.maxWeight - a.maxWeight;
-      }).map((oneVehicleTruck)=>(
+      }).map((oneVehicleTruck ,i)=>(
 
                 <div
-                  key={index}
+                  key={i}
                 //   style={}
                   onClick={() => {
-                      // handleClick(oneVehicleTruck.type);
+                      func.handleClick(oneVehicleTruck.truckNumber);
                     }}
                     id="1"
                     style={{position:'relative' }}
                     onDrop={(e) => {
-                        // drop(e);
+                        drop(e);
                     }}
                     onDragOver={(e) => {
-                        // allowDrop(e);
+                        allowDrop(e);
                     }}
                     >
                   <MDBProgress
@@ -201,7 +204,7 @@ const Main = ({truck,func}) => {
                       src={oneVehicleTruck.img}
                       alt={oneVehicleTruck.type}
                       data-type={oneVehicleTruck.truckNumber}
-                      data-pinCode={addressCode.pincode}
+                      data-pincode={addressCode.pincode}
                       style={{
                           width: "80%",
                           position: "absolute",
@@ -215,7 +218,7 @@ const Main = ({truck,func}) => {
                 ))}
               </div>
               ))}
-          </div> */}
+          </div>
     </div>
   )
 }
